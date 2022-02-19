@@ -19,7 +19,10 @@ loadMoreBtn.refs.button.addEventListener('click', fetchArticles);
 function onSearch(event) {
   event.preventDefault();
   clearGalleryImages();
-  fetchImages.query = event.currentTarget.elements.query.value;
+  fetchImages.query = event.currentTarget.elements.query.value.trim();
+  if (fetchImages.query === '') {
+    return
+  }
   fetchImages.resetPage();
   fetchArticles();
 }
