@@ -158,3 +158,8 @@ img {
   box-shadow: 0 0 10px #ffd524;
   text-shadow: 0 0 7px #ffffff;
 }
+
+.load-more:disabled {
+  background-color: #8338ec;
+  pointer-events: none;
+}

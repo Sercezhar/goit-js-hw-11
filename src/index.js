@@ -28,6 +28,7 @@ function onSearch(event) {
 }
 
 function fetchArticles() {
+  loadMoreBtn.disable();
   fetchImages.fetchImages().then(articles => {
     const totalHits =
       articles.totalHits - (fetchImages.page * articles.hits.length - articles.hits.length);
